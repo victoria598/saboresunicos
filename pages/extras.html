@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sabores Únicos</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .nav-link {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #0a4b8d;
+            color: #a8afb6;
+        }
+
+        .nav-link.active {
+            background-color: #495057 !important;
+            color: #ffffff !important;
+            border-radius: 5px;
+        }
+        .hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-effect:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Sabores Únicos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" id="navmenu">
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <section id="extras" class="section bg-light py-5 mt-3">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold text-dark">Inspiración de Expertos</h2>
+                    <p class="text-muted">Consejos de chefs mundialmente reconocidos para transformar tu cocina.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow hover-effect">
+                            <div class="card-body text-center">
+                                <i class="bi bi-egg-fried text-warning fs-1 mb-3"></i>
+                                <h5 class="card-title fw-bold">Gordon Ramsay</h5>
+                                <p class="text-muted">Chef, Restaurador y Presentador</p>
+                                <p class="card-text">"La clave para una gran comida está en la simplicidad. Encuentra
+                                    buenos ingredientes frescos y cocínalos bien. Menos es más."</p>
+                                <a href="#" class="btn btn-outline-dark btn-sm mt-2" data-bs-toggle="tooltip"
+                                    title="Más sobre Gordon Ramsay">Saber más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow hover-effect">
+                            <div class="card-body text-center">
+                                <i class="bi bi-leaf text-success fs-1 mb-3"></i>
+                                <h5 class="card-title fw-bold">Alice Waters</h5>
+                                <p class="text-muted">Fundadora del Restaurante Chez Panisse</p>
+                                <p class="card-text">"Comienza con ingredientes frescos y de temporada, y deja que ellos
+                                    sean los protagonistas de tu plato."</p>
+                                <a href="#" class="btn btn-outline-dark btn-sm mt-2" data-bs-toggle="tooltip"
+                                    title="Más sobre Alice Waters">Saber más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow hover-effect">
+                            <div class="card-body text-center">
+                                <i class="bi bi-stars text-primary fs-1 mb-3"></i>
+                                <h5 class="card-title fw-bold">Massimo Bottura</h5>
+                                <p class="text-muted">Chef del Restaurante Osteria Francescana</p>
+                                <p class="card-text">"La cocina es creatividad y memoria. Usa las técnicas tradicionales
+                                    como base, pero no tengas miedo de experimentar."</p>
+                                <a href="#" class="btn btn-outline-dark btn-sm mt-2" data-bs-toggle="tooltip"
+                                    title="Más sobre Massimo Bottura">Saber más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="beneficios" class="section bg-light py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold text-dark">Beneficios de Visitar Sabores Únicos</h2>
+                    <p class="text-muted">Descubre por qué somos tu mejor elección para una experiencia culinaria inolvidable.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow hover-effect">
+                            <div class="card-body text-center">
+                                <i class="bi bi-person-heart text-primary fs-1 mb-3"></i>
+                                <h5 class="card-title fw-bold">Atención Personalizada</h5>
+                                <p class="text-muted">Nos aseguramos de conocer tus preferencias para ofrecerte el mejor servicio y la comida que más te gusta.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow hover-effect">
+                            <div class="card-body text-center">
+                                <i class="bi bi-house-heart text-success fs-1 mb-3"></i>
+                                <h5 class="card-title fw-bold">Ambiente Único</h5>
+                                <p class="text-muted">Disfruta de un ambiente elegante y acogedor que hará que tu experiencia gastronómica sea inolvidable.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 shadow hover-effect">
+                            <div class="card-body text-center">
+                                <i class="bi bi-award text-warning fs-1 mb-3"></i>
+                                <h5 class="card-title fw-bold">Calidad Inigualable</h5>
+                                <p class="text-muted">Utilizamos ingredientes frescos y de la mejor calidad para crear platos excepcionales.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+    <script>
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "../assets/xml/menu.xml", true);
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                const xmlDoc = xhr.responseXML;
+                const items = xmlDoc.getElementsByTagName("item");
+                let menuHTML = "";
+                for (let i = 0; i < items.length; i++) {
+                    const nombre = items[i].getElementsByTagName("nombre")[0].textContent;
+                    const link = items[i].getElementsByTagName("link")[0].textContent;
+                    menuHTML += `<li class="nav-item">
+                                    <a class="nav-link" href="${link}">${nombre}</a>
+                                </li>`;
+                }
+                document.getElementById("navmenu").innerHTML = menuHTML;
+
+                const navLinks = document.querySelectorAll("#navmenu .nav-link");
+                navLinks.forEach(link => {
+                    link.addEventListener("click", function () {
+                        navLinks.forEach(nav => nav.classList.remove("active"));
+                        this.classList.add("active");
+                    });
+                });
+            } else {
+                console.error("Error al cargar el XML");
+            }
+        };
+        xhr.send();
+    </script>
+</body>
+
+</html>

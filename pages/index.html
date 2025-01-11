@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sabores Únicos</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .nav-link {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #0a4b8d;
+            color: #a8afb6;
+        }
+
+        .nav-link.active {
+            background-color: #495057 !important;
+            color: #ffffff !important;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Sabores Únicos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" id="navmenu">
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../assets/images/i1.png" class="d-block w-100" alt="Imagen 1" style="height: 700px;"> 
+            </div>
+            <div class="carousel-item">
+                <img src="../assets/images/promocion.jpg" class="d-block w-100" alt="Imagen 2" style="height: 700px;">
+           
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+    <section id="inicio" class="section text-center bg-light py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <h1 class="display-4 font-weight-bold text-black mb-4">Bienvenidos a Sabores Únicos</h1>
+                    <div class="experience-description mb-5">
+                        <h2 class="display-5 text-secondary mb-3">Descubre una experiencia culinaria única</h2>
+                        <p class="lead text-muted" style="font-size: 1.2rem;">En <strong>Sabores Únicos</strong>, ofrecemos una experiencia gastronómica excepcional, fusionando sabores auténticos con técnicas modernas para brindarte un viaje culinario inigualable. Disfruta de un ambiente cálido, personalizado y diseñado para hacerte sentir como en casa.</p>
+                    </div>
+                    <a href="recomendaciones.html" class="btn btn-success btn-lg mt-4">Ver nuestro menú</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "../assets/xml/menu.xml", true);
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                const xmlDoc = xhr.responseXML;
+                const items = xmlDoc.getElementsByTagName("item");
+                let menuHTML = "";
+                for (let i = 0; i < items.length; i++) {
+                    const nombre = items[i].getElementsByTagName("nombre")[0].textContent;
+                    const link = items[i].getElementsByTagName("link")[0].textContent;
+                    menuHTML += `<li class="nav-item">
+                                    <a class="nav-link" href="${link}">${nombre}</a>
+                                </li>`;
+                }
+                document.getElementById("navmenu").innerHTML = menuHTML;
+
+                const navLinks = document.querySelectorAll("#navmenu .nav-link");
+                navLinks.forEach(link => {
+                    link.addEventListener("click", function () {
+                        navLinks.forEach(nav => nav.classList.remove("active"));
+                        this.classList.add("active");
+                    });
+                });
+            } else {
+                console.error("Error al cargar el XML");
+            }
+        };
+        xhr.send();
+    </script>
+</body>
+
+</html>

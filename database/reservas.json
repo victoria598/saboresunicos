@@ -1,0 +1,10 @@
+[
+    {
+        "id": "1",
+        "nombre": "Juan Perez",
+        "fecha": "2025-01-31",
+        "hora": "20:50",
+        "personas": "2",
+        "comentarios": "Comida Italiana"
+    }
+]

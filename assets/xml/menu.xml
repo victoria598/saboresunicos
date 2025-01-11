@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <item>
+        <nombre>Inicio</nombre>
+        <link>index.html</link>
+    </item>
+    <item>
+        <nombre>Reservas</nombre>
+        <link>reservas.html</link>
+    </item>
+    <item>
+        <nombre>Ver Reservas</nombre>
+        <link>listareservas.php</link>
+    </item>
+    <item>
+        <nombre>Personaliza tu Experiencia</nombre>
+        <link>personalizacion.html</link>
+    </item>
+    <item>
+        <nombre>Recomendaciones</nombre>
+        <link>recomendaciones.html</link>
+    </item>
+    <item>
+        <nombre>Comunidad</nombre>
+        <link>comunidad.html</link>
+    </item>
+    <item>
+        <nombre>Extras</nombre>
+        <link>extras.html</link>
+    </item>
+    <item>
+        <nombre>Preguntas Frecuentes</nombre>
+        <link>faq.html</link>
+    </item>
+    <item>
+        <nombre>Contacto</nombre>
+        <link>contacto.html</link>
+    </item>
+</menu>
